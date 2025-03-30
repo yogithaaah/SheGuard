@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.android.sheguard'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.android.sheguard"
+        minSdk 27
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            crunchPngs true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+        buildConfig true
+    }
+    packagingOptions {
+        resources.excludes.add("META-INF/DEPENDENCIES")
+    }
+}
+
+dependencies {
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.firebase.auth
+    implementation libs.firebase.firestore
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
+    implementation(platform(libs.kotlin.bom))
+
+    implementation(platform(libs.firebase.bom))
+    implementation libs.firebase.messaging
+    implementation libs.firebase.analytics
+    implementation libs.firebase.database
+    implementation libs.firebase.firestore
+    implementation libs.firebase.messaging.directboot
+    implementation libs.google.firebase.messaging
+    implementation libs.google.auth.library.oauth2.http
+    implementation libs.retrofit
+    implementation libs.converter.gson
+
+    implementation libs.dotsindicator
+    implementation libs.gson
+    implementation libs.circleimageview
+    implementation libs.retrofit
+    implementation libs.converter.gson
+    implementation libs.androidx.viewpager2
+    implementation libs.play.services.maps
+    implementation libs.play.services.location
+    implementation libs.collapsingtoolbarlayout.subtitle
+}
