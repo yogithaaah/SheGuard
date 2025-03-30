@@ -19,7 +19,7 @@ SheGuard stands as the quintessential companion for women, ensuring their safety
   - **Audible Alert:** Activate a loud siren to attract attention.
   - **Automatic Emergency Call:** Connect with emergency services instantly in SOS mode.
  
-##💻Technology Used
+## 💻Technology Used
 - Android Studio
 - Java
 - Firebase
